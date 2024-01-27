@@ -1,0 +1,59 @@
+/* navigation.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 800px; /* Adjust the max-width as needed */
+    margin: auto;
+  }
+  
+  .grid-item {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden; /* Ensures the image doesn't spill out of the border radius */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer; /* Indicates the item is clickable */
+  }
+  
+  .grid-item a {
+    display: block;
+    height: 100%;
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  .grid-item img {
+    width: 100%;
+    height: 100%; /* Will fill the height of the grid item */
+    object-fit: cover; /* Ensures the image covers the block, might crop it */
+    transition: transform 0.3s ease; /* Smooth transition for the zoom effect */
+  }
+  
+  .grid-item:hover img {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+  }
+  
+  .grid-item p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    color: #fff;
+    padding: 10px;
+    margin: 0;
+    text-align: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  .grid-item:hover p {
+    background-color: rgba(0, 0, 0, 0.7); /* Darker overlay on hover */
+  }
+  
