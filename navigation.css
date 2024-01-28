@@ -164,59 +164,65 @@ button:hover {
   background-color: #286090;
 }
 
-.container {
-  display: flex;
-  justify-content: space-around;
-}
+/* Existing styles... */
 
-.team-management, .card-collection {
-  flex-basis: 45%;
-  background: white;
+/* Team Management and Formation Styles */
+.team-management {
+  max-width: 800px;
+  margin: 20px auto;
   padding: 20px;
+  background: white;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0,0,0,.1);
 }
 
-.field {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
+.formation .line {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
 }
 
 .drop-zone {
-  height: 150px;
-  background: #e9ecef;
-  border: 2px dashed #dee2e6;
-  border-radius: 4px;
+  width: 90px;
+  height: 140px;
+  border: 2px dashed #ccc;
+  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
+  background-color: #f9f9f9;
 }
 
-.drop-zone::after {
-  content: attr(data-position);
-  position: absolute;
-  bottom: 5px;
-  right: 5px;
-  font-size: 12px;
-  color: #6c757d;
-}
-
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+/* Card Collection Styles */
+.card-collection {
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 20px 0;
 }
 
 .card {
-  padding: 10px 15px;
+  display: inline-block;
+  width: 120px;
+  height: 180px;
+  margin-right: 10px;
   background: #007bff;
   color: white;
-  border-radius: 4px;
+  text-align: center;
+  line-height: 180px;
+  border-radius: 8px;
   cursor: grab;
+}
+
+.card:last-child {
+  margin-right: 0;
 }
 
 .card.dragging {
   opacity: 0.5;
+}
+
+/* Enhancements for Dragging Over Drop Zones */
+.drop-zone.hover {
+  background-color: #e1f5fe;
+  border-color: #0277bd;
 }
