@@ -1,0 +1,244 @@
+/* navigation.css */
+body {
+  font-family: Arial, sans-serif;
+  background-image: url('https://wallpapercave.com/wp/wp10054836.jpg'); /* Replace with your image file */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Optional: to have a parallax-like effect */
+  margin: 0;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  padding: 10px 0;
+  position: fixed; /* Changed to fixed to ensure it stays at the top */
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Ensures header is above all other content */
+  color: #fff; /* Ensure header text is visible on all backgrounds */
+  text-shadow: 1px 1px 8px rgba(0,0,0,0.7);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 3em;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 800px; /* Adjust the max-width as needed */
+  margin: 60px auto 20px; /* Adjust top margin to account for fixed header */
+}
+
+.grid-item {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden; /* Ensures the image doesn't spill out of the border radius */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer; /* Indicates the item is clickable */
+}
+
+.grid-item a {
+  display: block;
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+
+.grid-item img {
+  width: 100%;
+  height: 100%; /* Will fill the height of the grid item */
+  object-fit: cover; /* Ensures the image covers the block, might crop it */
+  transition: transform 0.3s ease; /* Smooth transition for the zoom effect */
+}
+
+.grid-item:hover img {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.grid-item p {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  color: #fff;
+  padding: 10px;
+  margin: 0;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.grid-item:hover p {
+  background-color: rgba(0, 0, 0, 0.7); /* Darker overlay on hover */
+}
+
+.form-container {
+  max-width: 400px;
+  margin: 100px auto 50px; /* Adjust the top margin as needed */
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.registration-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.submit-btn {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  background-color: #5cb85c;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #4cae4c;
+}
+
+.quiz-container {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.question {
+  margin-bottom: 20px;
+}
+
+.question label {
+  display: block;
+  margin: 5px 0;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #337ab7;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #286090;
+}
+
+/* Team Management and Formation Styles */
+.team-management {
+  display: inline-block;
+  vertical-align: top;
+  width: calc(60% - 10px);
+  margin-right: 20px;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+
+.formation .line {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.drop-zone {
+  width: 90px;
+  height: 140px;
+  border: 2px dashed #ccc;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f9f9f9;
+}
+
+/* Card Collection Styles */
+.card-collection {
+  display: inline-block;
+  vertical-align: top;
+  width: calc(40% - 10px);
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.card {
+  display: inline-block;
+  width: 120px;
+  height: 180px;
+  margin: 0 10px 10px 0;
+  background: #007bff;
+  color: white;
+  text-align: center;
+  line-height: 180px;
+  border-radius: 8px;
+  cursor: grab;
+}
+
+.card.dragging {
+  opacity: 0.5;
+}
+
+.drop-zone.hover {
+  background-color: #e1f5fe;
+  border-color: #0277bd;
+}
+
+/* navigation.css continued from previous content... */
+
+.layout-container {
+  display: table-row; /* Enables flexbox layout */
+  justify-content: space-between; /* Spaces out children */
+  align-items: flex-start; /* Aligns children at the start of the cross axis */
+  margin-top: 20px; /* Space below the header */
+}
+
+.team-management {
+  flex: 3; /* Takes up 3 parts of the available space */
+  margin-right: 20px; /* Adds some space between the team management and card collection */
+}
+
+.card-collection {
+  flex: 2; /* Takes up 2 parts of the available space, making it narrower than the team management */
+  overflow-x: auto; /* Enables horizontal scrolling for the card collection */
+  white-space: nowrap; /* Ensures cards are laid out in a single line */
+}
+
+.card {
+  display: inline-block; /* Necessary for cards to line up horizontally */
+  margin-right: 10px; /* Space between cards */
+  /* Other card styles remain unchanged */
+}
+
+/* You may need to adjust the flex values and margins to suit your design needs */

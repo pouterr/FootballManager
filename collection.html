@@ -3,45 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Team Builder - 4-3-3 Formation</title>
-    <link rel="stylesheet" href="navigation.css">
+    <title>Collection</title>
+    <link rel="stylesheet" href="css/collection.css">
 </head>
 <body>
     <header>
-        <h1>Team Builder - 4-3-3 Formation</h1>
+        <h1>Collection</h1>
     </header>
-    <div class="team-management">
-        <div class="formation">
-            <div class="line defenders">
-                <div class="drop-zone"></div>
-                <div class="drop-zone"></div>
-                <div class="drop-zone"></div>
-                <div class="drop-zone"></div>
+    <div class="layout-container">
+        <div class="team-management">
+            <div class="formation">
+                <div class="line midfielders">
+                    <div class="drop-zone"></div>
+                    <div class="drop-zone"></div>
+                    <div class="drop-zone"></div>
+                </div>
+                <div class="line forwards">
+                    <div class="drop-zone"></div>
+                    <div class="drop-zone"></div>
+                    <div class="drop-zone"></div>
+                </div>
+                <div class="line defenders">
+                    <div class="drop-zone"></div>
+                    <div class="drop-zone"></div>
+                    <div class="drop-zone"></div>
+                    <div class="drop-zone"></div>
+                </div>
+                <div class="line goalkeeper">
+                    <div class="drop-zone"></div>
+                </div>
             </div>
-            <div class="line midfielders">
-                <div class="drop-zone"></div>
-                <div class="drop-zone"></div>
-                <div class="drop-zone"></div>
-            </div>
-            <div class="line forwards">
-                <div class="drop-zone"></div>
-                <div class="drop-zone"></div>
-                <div class="drop-zone"></div>
-            </div>
-            <div class="line goalkeeper">
-                <div class="drop-zone"></div>
+        </div>
+        <div class="card-collection">
+            <!-- Scrollable row of cards -->
+            <div class="cards">
+                <div class="card" draggable="true">Player 1</div>
+                <div class="card" draggable="true">Player 2</div>
+                <div class="card" draggable="true">Player 3</div>
+                <div class="card" draggable="true">Player 4</div>
+                <div class="card" draggable="true">Player 5</div>
+                <div class="card" draggable="true">Player 6</div>
+                <div class="card" draggable="true">Player 7</div>
+                <div class="card" draggable="true">Player 8</div>
+                <div class="card" draggable="true">Player 9</div>
+                <div class="card" draggable="true">Player 10</div>
+                <div class="card" draggable="true">Player 11</div>
+                <div class="card" draggable="true">Player 12</div>
+                <div class="card" draggable="true">Player 13</div>
+                <div class="card" draggable="true">Player 14</div>
+                <div class="card" draggable="true">Player 15</div>
+                <!-- Add more cards as needed -->
             </div>
         </div>
     </div>
-    <div class="card-collection">
-        <!-- Scrollable row of cards -->
-        <div class="cards">
-            <div class="card" draggable="true">Player 1</div>
-            <div class="card" draggable="true">Player 2</div>
-            <div class="card" draggable="true">Player 3</div>
-            <!-- Add more cards as needed -->
-        </div>
-    </div>
-    <script src="collection.js"></script>
+    <script src="scripts/collection.js"></script>
 </body>
 </html>
