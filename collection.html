@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football Manager - Team Builder</title>
+    <link rel="stylesheet" href="navigation.css">
+</head>
+<body>
+    <header>
+        <h1>Team Builder</h1>
+    </header>
+    <div class="container">
+        <div class="team-management">
+            <h2>Team Management</h2>
+            <div class="field">
+                <div class="drop-zone" data-position="Goalkeeper"></div>
+                <div class="drop-zone" data-position="Defender"></div>
+                <div class="drop-zone" data-position="Midfielder"></div>
+                <div class="drop-zone" data-position="Forward"></div>
+            </div>
+        </div>
+        <div class="card-collection">
+            <h2>My Collection</h2>
+            <div class="cards">
+                <div class="card" draggable="true" data-card-id="1">Player 1</div>
+                <div class="card" draggable="true" data-card-id="2">Player 2</div>
+                <div class="card" draggable="true" data-card-id="3">Player 3</div>
+                <div class="card" draggable="true" data-card-id="4">Player 4</div>
+                <!-- Add more cards as needed -->
+            </div>
+        </div>
+    </div>
+    <script src="collection.js"></script>
+</body>
+</html>
