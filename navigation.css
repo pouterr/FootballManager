@@ -1,7 +1,7 @@
 /* navigation.css */
     body {
     font-family: Arial, sans-serif;
-    background-image: url('background-image.jpg'); /* Replace with your image file */
+    background-image: url('https://wallpapercave.com/wp/wp10054836.jpg'); /* Replace with your image file */
     background-size: cover;
     background-position: center;
     background-attachment: fixed; /* Optional: to have a parallax-like effect */
@@ -11,16 +11,19 @@
   
   header {
     text-align: center;
-    padding: 20px 0;
-    color: #fff;
-    background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    padding: 10px 0;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensures header is above all other content */
   }
-  
-  
+
   header h1 {
     margin: 0;
-    font-size: 2.5em;
-  }  
+    font-size: 3em;
+    color: #fff;
+    text-shadow: 1px 1px 8px rgba(0,0,0,0.7);
+  }
   
   .grid-container {
     display: grid;
@@ -72,4 +75,91 @@
   .grid-item:hover p {
     background-color: rgba(0, 0, 0, 0.7); /* Darker overlay on hover */
   }
-  
+
+  /* Add these styles to your existing navigation.css file */
+
+.form-container {
+  max-width: 400px;
+  margin: 100px auto 50px; /* Adjust the top margin as needed */
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.registration-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.submit-btn {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  background-color: #5cb85c;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #4cae4c;
+}
+
+/* Ensures that the header doesn't overlap the form on scroll */
+header {
+  position: absolute;
+}
+
+
+/* ... (existing styles) ... */
+
+.quiz-container {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.question {
+  margin-bottom: 20px;
+}
+
+.question label {
+  display: block;
+  margin: 5px 0;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #337ab7;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #286090;
+}

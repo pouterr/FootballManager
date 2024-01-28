@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football Quiz</title>
+    <link rel="stylesheet" href="navigation.css">
+</head>
+<body>
+    <header>
+        <h1>Football Quiz</h1>
+    </header>
+    <div class="quiz-container">
+        <form id="footballQuiz" class="quiz-form">
+            <!-- Question 1 -->
+            <div class="question">
+                <p>1. Which country won the 2018 FIFA World Cup?</p>
+                <label><input type="radio" name="question1" value="France" required> France</label>
+                <label><input type="radio" name="question1" value="Brazil"> Brazil</label>
+                <label><input type="radio" name="question1" value="Germany"> Germany</label>
+                <label><input type="radio" name="question1" value="Argentina"> Argentina</label>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="question">
+                <p>2. Who scored the "Hand of God" goal in a World Cup match?</p>
+                <label><input type="radio" name="question2" value="Diego Maradona" required> Diego Maradona</label>
+                <label><input type="radio" name="question2" value="Pelé"> Pelé</label>
+                <label><input type="radio" name="question2" value="Lionel Messi"> Lionel Messi</label>
+                <label><input type="radio" name="question2" value="Cristiano Ronaldo"> Cristiano Ronaldo</label>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="question">
+                <p>3. Which club has won the most Champions League titles?</p>
+                <label><input type="radio" name="question3" value="Real Madrid" required> Real Madrid</label>
+                <label><input type="radio" name="question3" value="FC Barcelona"> FC Barcelona</label>
+                <label><input type="radio" name="question3" value="Manchester United"> Manchester United</label>
+                <label><input type="radio" name="question3" value="Bayern Munich"> Bayern Munich</label>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="question">
+                <p>4. What is the maximum number of players a football team can have on the field at any time?</p>
+                <label><input type="radio" name="question4" value="11" required> 11</label>
+                <label><input type="radio" name="question4" value="10"> 10</label>
+                <label><input type="radio" name="question4" value="12"> 12</label>
+                <label><input type="radio" name="question4" value="13"> 13</label>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="question">
+                <p>5. Which player has won the most Ballon d'Or awards?</p>
+                <label><input type="radio" name="question5" value="Lionel Messi" required> Lionel Messi</label>
+                <label><input type="radio" name="question5" value="Cristiano Ronaldo"> Cristiano Ronaldo</label>
+                <label><input type="radio" name="question5" value="Michel Platini"> Michel Platini</label>
+                <label><input type="radio" name="question5" value="Johan Cruyff"> Johan Cruyff</label>
+            </div>
+
+            <button type="submit">Submit Answers</button>
+        </form>
+        <div id="results"></div>
+    </div>
+    <script src="quiz.js"></script>
+</body>
+</html>
