@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Card Market</title>
+    <link rel="stylesheet" href="css/market.css">
+</head>
+<body>
+    <header>
+        <h1>Market</h1>
+    </header>
+    <div id="filter-sort">
+        <!-- Sorting Options -->
+        <select id="sortSelect" onchange="sortCards()">
+            <option value="name">Name</option>
+            <option value="value">Value</option>
+        </select>
+
+        <!-- Filtering Options -->
+        <select id="countryFilter">
+            <option value="">Select a Country</option>
+            <option value="Portugal">Portugal</option>
+            <option value="Argentina">Argentina</option>
+            <option value="Brazil">Brazil</option>
+            <option value="Germany">Germany</option>
+            <option value="France">France</option>
+            <option value="Netherlands">Netherlands</option>
+            <option value="Northern Ireland">Northern Ireland</option>
+            <option value="England">England</option>
+            <option value="Hungary">Hungary</option>
+            <option value="Russia">Russia</option>
+            <option value="Italy">Italy</option>
+            <!-- Add more countries as needed -->
+        </select>
+    </div>
+
+    <!-- Market Cards -->
+    <div id="marketCards" class="card-container">
+        <div class="card" data-name="Ronaldo" data-value="50" data-country="Portugal">
+            <h3>Ronaldo</h3>
+            <p>Value: 50</p>
+            <p>Country: Portugal</p>
+        </div>
+        <div class="card" data-name="Messi" data-value="70" data-country="Argentina">
+            <h3>Messi</h3>
+            <p>Value: 70</p>
+            <p>Country: Argentina</p>
+        </div>
+        <div class="card" data-name="Pele" data-value="60" data-country="Brazil">
+            <h3>Pele</h3>
+            <p>Value: 60</p>
+            <p>Country: Brazil</p>
+        </div>
+        <div class="card" data-name="Maradona" data-value="80" data-country="Argentina">
+            <h3>Maradona</h3>
+            <p>Value: 80</p>
+            <p>Country: Argentina</p>
+        </div>
+        <div class="card" data-name="Beckenbauer" data-value="65" data-country="Germany">
+            <h3>Beckenbauer</h3>
+            <p>Value: 65</p>
+            <p>Country: Germany</p>
+        </div>
+        <div class="card" data-name="Zidane" data-value="75" data-country="France">
+            <h3>Zidane</h3>
+            <p>Value: 75</p>
+            <p>Country: France</p>
+        </div>
+        <div class="card" data-name="Cruyff" data-value="68" data-country="Netherlands">
+            <h3>Cruyff</h3>
+            <p>Value: 68</p>
+            <p>Country: Netherlands</p>
+        </div>
+        <div class="card" data-name="Eusebio" data-value="55" data-country="Portugal">
+            <h3>Eusebio</h3>
+            <p>Value: 55</p>
+            <p>Country: Portugal</p>
+        </div>
+        <div class="card" data-name="Best" data-value="72" data-country="Northern Ireland">
+            <h3>Best</h3>
+            <p>Value: 72</p>
+            <p>Country: Northern Ireland</p>
+        </div>
+        <div class="card" data-name="Platini" data-value="62" data-country="France">
+            <h3>Platini</h3>
+            <p>Value: 62</p>
+            <p>Country: France</p>
+        </div>
+        <div class="card" data-name="Charlton" data-value="60" data-country="England">
+            <h3>Charlton</h3>
+            <p>Value: 60</p>
+            <p>Country: England</p>
+        </div>
+        <div class="card" data-name="Di Stefano" data-value="78" data-country="Argentina">
+            <h3>Di Stefano</h3>
+            <p>Value: 78</p>
+            <p>Country: Argentina</p>
+        </div>
+        <div class="card" data-name="Puskas" data-value="74" data-country="Hungary">
+            <h3>Puskas</h3>
+            <p>Value: 74</p>
+            <p>Country: Hungary</p>
+        </div>
+        <div class="card" data-name="Yashin" data-value="58" data-country="Russia">
+            <h3>Yashin</h3>
+            <p>Value: 58</p>
+            <p>Country: Russia</p>
+        </div>
+        <div class="card" data-name="Maldini" data-value="77" data-country="Italy">
+            <h3>Maldini</h3>
+            <p>Value: 77</p>
+            <p>Country: Italy</p>
+        </div>
+    </div>
+    
+    <div class="pagination">
+        <button id="prevPage">Prev</button>
+        <span id="currentPage">1</span>
+        <button id="nextPage">Next</button>
+    </div>
+
+    <!-- User Collection -->
+    <h2>Your Collection</h2>
+    <div id="userCollection" class="card-container">
+        <!-- Predefined cards (add more as needed) -->
+        <div class="card" data-name="Ronaldo" data-value="30">
+            <h3>Ronaldo</h3>
+            <p>Value: 30</p>
+        </div>
+        <div class="card" data-name="Messi" data-value="40">
+            <h3>Messi</h3>
+            <p>Value: 40</p>
+        </div>
+    </div>
+
+    <script src="scripts/market.js"></script>
+</body>
+</html>

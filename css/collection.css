@@ -66,4 +66,67 @@ body {
   .card-collection {
     flex: 1; /* Allows the card collection section to grow */
   }
-  
+
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px; /* Adjust the spacing between elements */
+    margin-top: 20px; /* Space from the content above */
+}
+
+.pagination button {
+    padding: 8px 16px;
+    border: 1px solid #ccc; /* Light grey border */
+    background-color: #fff; /* White background */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Hand cursor on hover */
+    transition: color 0.3s, border-color 0.3s, box-shadow 0.3s; /* Smooth transitions */
+}
+
+.pagination button:hover {
+    color: #007bff; /* Blue text on hover */
+    border-color: #007bff; /* Blue border on hover */
+}
+
+.pagination button.active {
+    border-color: #007bff; /* Blue border for active page */
+    box-shadow: 0 0 0 2px #007bff; /* Blue shadow for active page */
+}
+
+.pagination button:disabled {
+    color: #ccc; /* Light grey text for disabled button */
+    border-color: #ccc; /* Light grey border for disabled button */
+    cursor: not-allowed; /* 'Not allowed' cursor for disabled state */
+}
+
+.pagination span {
+    color: #ccc; /* Light grey text for ellipsis */
+}
+
+.pagination-container {
+  text-align: center;
+  margin-top: 20px; /* Adjust as necessary for spacing */
+}
+
+.pagination-button {
+  padding: 5px 10px;
+  margin: 0 5px;
+  border: 1px solid #ddd; /* Light grey border */
+  background-color: #f8f9fa; /* Light background */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  outline: none;
+}
+
+.pagination-button:hover,
+.pagination-button:focus {
+  border-color: #007bff; /* Blue border for active/hover state */
+  background-color: #e7f3ff; /* Light blue background on hover/focus */
+}
+
+.pagination-button:disabled {
+  color: #6c757d; /* Grey text for disabled state */
+  cursor: not-allowed; /* 'Not allowed' cursor for disabled state */
+}

@@ -54,8 +54,47 @@
                 <div class="card" draggable="true">Player 15</div>
                 <!-- Add more cards as needed -->
             </div>
-        </div>
+            <div class="pagination">
+                <button id="prevPage">Prev</button>
+                <span id="currentPage">1</span>
+                <button id="nextPage">Next</button>
+            </div>
+           
+        </div>   
     </div>
+    <script>document.addEventListener("DOMContentLoaded", () => {
+        const cardsPerPage = 11;
+        let currentPage = 1;
+        const cards = document.querySelectorAll('.card');
+        const totalPages = Math.ceil(cards.length / cardsPerPage);
+    
+        function renderCards() {
+    const startIndex = (currentPage - 1) * cardsPerPage;
+    const endIndex = startIndex + cardsPerPage;
+    cards.forEach((card, index) => {
+        card.style.display = (index >= startIndex && index < endIndex) ? '' : 'none'; // Let the flex container manage the layout
+    });
+    document.getElementById('currentPage').textContent = currentPage;
+}
+
+    
+        document.getElementById('nextPage').addEventListener('click', () => {
+            if (currentPage < totalPages) {
+                currentPage++;
+                renderCards();
+            }
+        });
+    
+        document.getElementById('prevPage').addEventListener('click', () => {
+            if (currentPage > 1) {
+                currentPage--;
+                renderCards();
+            }
+        });
+    
+        renderCards(); // Initial render
+    });
+    </script>
     <script src="scripts/collection.js"></script>
 </body>
 </html>

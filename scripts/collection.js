@@ -35,5 +35,5 @@ document.addEventListener('DOMContentLoaded', () => {
                 zone.classList.remove('hover');
             }
         });
-    });
+    });  
 });
